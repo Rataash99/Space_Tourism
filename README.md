@@ -34,7 +34,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://github.com/Rataash99/Space_Tourism]
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
@@ -42,63 +42,54 @@ Users should be able to:
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
+- Tailwind CSS
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+I was planning to conquer a react + tailwind project for a long time because I almost forgot React since I haven't used it for so long so this project helped me remember react and tailwind concepts back.
 
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
+```JSX
+ <div className='flex gap-3 tracking-[2.8px] md:w-full md:absolute md:text-[1.1rem] md:pl-8 lg:pl-[8rem] xl:pl-[10rem] 2xl:pl-[12rem] lg:text-[1.2rem] xl:text-[1.4rem] md:gap-5 md:top-32 lg:top-44 transition-all duration-500'>
+      <span className='opacity-50'>01</span>
+      <h2 className='uppercase'> Pick Your Destination</h2>
+  </div>
 ```
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+html{
+  font-family: 'Bellefair', serif;
+  background-color: black;
+  ::-webkit-scrollbar {
+    width: 0;
+  }
 }
 ```
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+  const addContent = (e) => {
+        destination_Data.map((item, index) => {
+            if(e.target.classList.contains(item.name.replace(/\s/g, ''))){
+                refRole.current.innerHTML = destination_Data[index].role;
+                refBio.current.innerHTML = destination_Data[index].bio;
+                refName.current.innerHTML = destination_Data[index].name;
+                refImage.current.src = item.name == 'Douglas Hurley' ? douglas : item.name == 'Mark Shuttleworth' ? mark : item.name == 'Victor Glover' ? victor : anousheh;
+                setUnderline(e);
+            }
+        })
+    }
 ```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
-
-### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [Tailwind Docs](https://tailwindcss.com/docs/installation) - Tailwind Docs are amazing as none of us can remember everything or most of the things instead of blaming yourself better to take a look at documentation, no ones expecting you to remember everything (^_^)>.
+- [React Learning](https://react.dev/learn) - I am enjoying reading documentation rather than tutorial hell nowadays.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+- Frontend Mentor - [@Rataash99](https://www.frontendmentor.io/profile/Rataash99)
+- Frontend Mentor - [@rataash99](https://www.showwcase.com/rataash99)
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+I am really glad to get to work on this project I would like to thank kevin powell and all others for providing this project. Glad to be a part of the community.
